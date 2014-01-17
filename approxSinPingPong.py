@@ -1,4 +1,6 @@
 import math
+from gpanel import *
+
 def ggT(a,b): # Rekursive Definition nach Euklid
     if a==b: return a
     if a==1 or b==1: return 1
@@ -37,8 +39,8 @@ def pFunc(x):
     return calcPingPong(x,4,3)
 
 def approxSin(x):
-    ping = 10
-    pong = 11
+    ping = 101
+    pong = 102
     T = kgV(ping,pong)
     xMax = math.floor(T/2)
     yMax = calcPingPong(xMax,ping,pong)
@@ -47,10 +49,28 @@ def approxSin(x):
     return 1.0/yMax*y
 
 
-g=plotfunc(approxSin)
-print dir(g)
-print
-print g
+#g=plotfunc(approxSin)
+#lk = dir(g)
+#for e in lk:
+
+#    print e,type(e)
+#print
+#print g
+
+makeGPanel(0, 10, -2, 2)
+
+# draw coordinate system
+line(0, 0, 10, 0) # x axis
+line(0, -5, 0, 5) # y axis
+
+x  = 0
+while x < 10:
+    y = approxSin(x)
+    if x == 0:
+        move(x, y)
+    else:
+        draw(x, y)
+    x = x + 0.001
 
     
 
