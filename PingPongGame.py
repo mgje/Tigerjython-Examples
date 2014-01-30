@@ -43,11 +43,11 @@ def playPingPong(ping,pong,N_End):
         pos += direction
     return [symmetryDiff,symmetryDiffConst]
 
-for ping in range (3,150):
+for ping in range (3,151):
     for pong in range (2,ping):
         #if not teilt(ping,pong):
-        #if ggT(ping,pong)==1:
-        if (True):
+        if ggT(ping,pong)==1:
+        #if (True):
             res = playPingPong(ping,pong,ping*pong*3)
             s = str(ping)+" / "+str(pong)+","
             s += str(res[0])
