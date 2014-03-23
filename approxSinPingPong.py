@@ -57,11 +57,9 @@ def approxSin(x):
 #print
 #print g
 
-makeGPanel(0, 10, -2, 2)
+makeGPanel(-1, 11, -3, 3)
+drawGrid(0, 10, -2.0, 2.0)
 
-# draw coordinate system
-line(0, 0, 10, 0) # x axis
-line(0, -5, 0, 5) # y axis
 
 x  = 0
 while x < 10:

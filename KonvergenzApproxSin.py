@@ -38,13 +38,10 @@ def approxsin(ping,pong,x):
     N = kgV(ping,pong)
     return pingpong(ping,pong,x/math.pi*N)
 
-#print maxpingpong(9,10)
+
 
 makeGPanel(-1,8, -2, 2)
-
-# draw coordinate system
-line(0, 0, 8, 0) # x axis
-line(0, -2, 0, 2) # y axis
+drawGrid(-0., 7., -1.0, 1.0)
 
 setColor("blue")
 x=0
