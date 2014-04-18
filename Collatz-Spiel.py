@@ -17,20 +17,21 @@ def collatz(x):
         #print "x: ",x,"n: ",n
     return n
 
-N_Max = 30
-y_Max = 40
+N_Max = 200
+y_Max = 120
 
-makeGPanel(-4, N_Max+1, -2, y_Max+1)
+makeGPanel(-N_Max*0.15, N_Max*1.05, -y_Max*0.12, y_Max*1.02)
 drawGrid(0, N_Max, 0, y_Max)
 
-setColor("red")
+lineWidth(1)
+setColor("blue")
+
+
 x  = 1
 while x < N_Max:
     y = collatz(x)
-    if x == 1:
-        move(x, y)
-    else:
-        draw(x, y)
+    move(x, 0)
+    draw(x, y)
     x = x + 1
 
 

@@ -8,7 +8,7 @@ def pfadlaenge(P):
     return L    
     
 
-print pfadlaenge([[0,0], [1,0],[1,2], [0,2]])
+print pfadlaenge([[0,2], [1,0],[1.5,2], [0,2]])
 
 
 makeGPanel(-3,4, -3, 4)
@@ -17,7 +17,7 @@ drawGrid(-2.0, 3., -2., 3.,)
 
 lineWidth(3)
 setColor("red")
-move(0,0)
+move(0,2)
 draw(1,0)
-draw(1,2)
+draw(1.5,2)
 draw(0,2)

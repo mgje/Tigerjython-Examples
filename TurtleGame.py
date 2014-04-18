@@ -5,7 +5,7 @@ def randomColor():
     r = randint(0, 255)
     g = randint(0, 255)
     b = randint(0, 255)
-    return makeColor(r, g, b,255)
+    return makeColor(r, g, b,15)
     
 makeGPanel(-3,4, -3, 4)
 #drawGrid(-2.0, 3., -2., 3.,)
@@ -16,7 +16,7 @@ setColor("red")
 x = [0.5,-1.5,2.5,  3,   1,  -1,0]
 y = [2.5,1.5, -1.0, -2.0,0.0,1, 0.5]
 
-N = 78912
+N = 100000
 
 x = []
 y = []

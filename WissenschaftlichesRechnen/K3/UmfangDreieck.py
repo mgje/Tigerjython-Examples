@@ -16,4 +16,4 @@ def umfang(l):
     return um
         
 # Test mit Parametern (1,0) (3,0) (3,2)
-print umfang([1.,0.,3.,0.,3.,2.])
+print umfang([1.,0.,3.,0.,3.,2.,0.,0.])
