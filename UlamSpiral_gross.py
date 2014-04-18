@@ -69,8 +69,7 @@ for k in range(1,k_Max):
     #time.sleep(0.01)
     p = k+41 
     setColor(col1)
-    
-    
+
     #if isquad(p):
     #    setColor(col3)
 
