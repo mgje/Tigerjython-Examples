@@ -43,13 +43,15 @@ for i in range(1,N+1):
             weg.append(richtung[ind])   
 
 N_G = int(math.floor(N/2))
-gp = makeGPanel(-N_G*1.05, N_G*1.05, -N_G*1.05, N_G*1.05)
-gp.windowSize(906, 906)
+gp = makeGPanel(-N_G*1.05, N_G*1.05, -N_G*1.149, N_G*1.05)
+gp.windowSize(908, 908)
 drawGrid(-N_G, N_G,-N_G, N_G,2*N_G,2*N_G)
+font(Font("Courier", Font.BOLD, 42)) 
 
 col1 = makeColor(233, 44, 3,255)
 col2 = makeColor(22, 44, 3,255)
 col3 = makeColor(222, 244, 3,255)
+white = makeColor(255, 255, 255,255)
 setColor(col1)
 move(0,0)
 fillCircle(0.45)
@@ -60,8 +62,8 @@ for k in range(1,k_Max):
     a = [0,0]
     for b in g:
         a = map(sum, zip(a,b))
-    time.sleep(0.05)
-    p = k+1
+    time.sleep(0.5)
+    p = k+41
     if isprime(p):
         setColor(col2)
     else:
@@ -70,7 +72,14 @@ for k in range(1,k_Max):
         setColor(col3)
     
     move(a)
-    fillCircle(0.45)
+    fillCircle(0.48)
+
+    setColor(white)
+    fillRectangle(-1.1*N_G,-1.02*N_G,1.1*N_G,-1.12*N_G)
+    
+    setColor(col2)
+    text(0,-1.12*N_G,str(int(p)))
+    title(str(int(p)))
     
 
 # Frage Wie wählt man das N, wenn man die k-te Zahl
