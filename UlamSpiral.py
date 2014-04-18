@@ -1,6 +1,8 @@
 import math
 import time
 from gpanel import *
+k_Max = 8950
+Start = 41
 
 def isprime(n):
     '''check if integer n is a prime'''
@@ -34,7 +36,7 @@ def isquad(n):
 richtung = [[1,0],[0,1],[-1,0],[0,-1]]
 
 weg = []
-k_Max = 800
+
 N = math.floor(math.sqrt(k_Max+1/4)+0.5)
 for i in range(1,N+1):
     for j in range(2):
@@ -52,18 +54,26 @@ col1 = makeColor(233, 44, 3,255)
 col2 = makeColor(22, 44, 3,255)
 col3 = makeColor(222, 244, 3,255)
 white = makeColor(255, 255, 255,255)
-setColor(col1)
+
+if isprime(Start):
+    setColor(col2)
+else:
+    setColor(col1)
 move(0,0)
 fillCircle(0.45)
-
+setColor(white)
+fillRectangle(-1.1*N_G,-1.02*N_G,1.1*N_G,-1.12*N_G)    
+setColor(col2)
+text(0,-1.12*N_G,str(int(Start)))
+time.sleep(1.1)
 
 for k in range(1,k_Max):
     g = weg[0:k]
     a = [0,0]
     for b in g:
         a = map(sum, zip(a,b))
-    time.sleep(0.5)
-    p = k+41
+    time.sleep(0.25)
+    p = k+Start
     if isprime(p):
         setColor(col2)
     else:
@@ -72,7 +82,7 @@ for k in range(1,k_Max):
         setColor(col3)
     
     move(a)
-    fillCircle(0.48)
+    fillCircle(0.50)
 
     setColor(white)
     fillRectangle(-1.1*N_G,-1.02*N_G,1.1*N_G,-1.12*N_G)
