@@ -13,7 +13,7 @@ size = 550
 makeGPanel(Size(2 * size, size))
 window(0, size, size, 0)    # y axis downwards
 
-// bmIn = getImage(imagePath+sep+"pfau.jpg")
+# bmIn = getImage(imagePath+sep+"pfau.jpg")
 bmIn = getImage("sprites/frogbw.png")
 image(bmIn, 0, size)
 w = bmIn.getWidth()

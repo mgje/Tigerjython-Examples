@@ -20,8 +20,8 @@ w = bmIn.getWidth()
 h = bmIn.getHeight()
 bmOut = GBitmap(w, h)
 
-#mask = [[1/9, 1/9, 1/9], [1/9, 1/9, 1/9], [1/9, 1/9, 1/9]]  # smoothing
-mask = [[ 0, -1,  0], [-1,  5, -1], [0,  -1,  0]]  # sharpening
+mask = [[1/9, 1/9, 1/9], [1/9, 1/9, 1/9], [1/9, 1/9, 1/9]]  # smoothing
+#mask = [[ 0, -1,  0], [-1,  5, -1], [0,  -1,  0]]  # sharpening
 #mask = [[-1, -2, -1], [ 0,  0,  0], [ 1,  2,  1]]  # horizontal edge extraction
 #mask = [[-1,  0,  1], [-2,  0,  2], [-1,  0,  1]]  # vertical edge extraction
 
