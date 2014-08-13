@@ -14,7 +14,7 @@ size = 550
 makeGPanel(Size(2 * size, size))
 window(0, size, size, 0)    # y axis downwards
 
-# bmIn = getImage(imagePath+sep+"pfau.jpg")
+#bmIn = getImage(imagePath+sep+"pfau.jpg")
 bmIn = getImage("sprites/frogbw.png")
 image(bmIn, 0, size)
 w = bmIn.getWidth()
@@ -24,19 +24,21 @@ bmOut = GBitmap(w, h)
 
 for x in range(0, w):
     for y in range(0, h):
-        c = bmIn.getPixelColor(x, y)
-        v = c.getRed()
-        gray = Color(v, v, v)
 
-        x_ = 200 +(x-220)*sin(sqrt(((x-220)**2+(y-220)**2)/9000))
-        
+        x_ = 200 +(x-220)*sin(sqrt(((x-220)**2+(y-220)**2)/8000))
         x_ = int(x_)
         y_ = 160+(y-160)*sqrt(((x-160)**2+(y-160)**2)/9800)
-        
         y_ = int(y_)
         
-        # in domain range
+        v = 255
         if (0< x_ < w) and (0<y_<h):
-            bmOut.setPixelColor(x_, y_, gray)
+            c = bmIn.getPixelColor(x_, y_)
+            v = c.getRed()
+        gray = Color(v, v, v)
+
+        
+        
+        # in domain range
+        bmOut.setPixelColor(x, y, gray)
 
 image(bmOut, size / 2, size)
