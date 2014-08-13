@@ -8,10 +8,10 @@ filename = partsPath[-1]
 partsPath.remove(filename)
 imagePath = sep.join(partsPath)
 
-size = 300
+size = 550
 makeGPanel(Size(2*size, size))
 window(0, size, size, 0)    # y axis downwards
-img = getImage("pfau.jpg")
+img = getImage(imagePath+sep+"pfau.jpg")
 w = img.getWidth()
 h = img.getHeight()
 image(img, 0, size)
