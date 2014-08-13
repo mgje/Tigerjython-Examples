@@ -14,10 +14,12 @@ def koch(s, n):
     left(45)
     koch(s / 3, n - 1)
 
-makeTurtle()
+a = makeTurtle()
+print dir(a)
+a.setSize(900,900)
 hideTurtle()
 N = 4
-L = 200
+L = 600
 setPos( -240, 180)
 right(90)
 koch(L, N)
