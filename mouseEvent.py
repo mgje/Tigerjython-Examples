@@ -32,9 +32,11 @@ def onMousePressed(x, y):
             home()
             
 # create color palette                   
-cols = make100col(255,255,255,0,0,255)   
+cols = make100col(255,255,255,0,0,255)  
+ 
 # start turtle world and register mouse event     
 makeTurtle(mousePressed = onMousePressed)
+
 # runs 1000x faster without turtle figure
 hideTurtle()
 setPenWidth(10)
