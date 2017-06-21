@@ -40,7 +40,7 @@ def isquad(n):
 
 richtung = [[1,0],[0,1],[-1,0],[0,-1]]
 weg = []
-N = math.floor(math.sqrt(k_Max+1/4)+0.5)
+N = int(math.floor(math.sqrt(k_Max+1/4)+0.5))
 for i in range(1,N+1):
     for j in range(2):
         for k in range(i):
