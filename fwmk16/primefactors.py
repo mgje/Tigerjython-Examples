@@ -17,6 +17,6 @@ def primefactors(n,l=[]):
     
     return l
 
-for i in range(2,100):
+for i in range(1000000,1000030):
     print i, "  : ", primefactors(i,[])
 
