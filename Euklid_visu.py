@@ -7,9 +7,7 @@ def initGPanel(N):
     title("go go")
     windowSize(980, 900)
     
-# Skalarprodukut
-def sp(x,y):
-    return x[0]*y[0]+x[1]*y[1]
+
 
 def draw_Grid(N):
     lineWidth(0)
@@ -21,8 +19,6 @@ def draw_Grid(N):
 def draw_Quads(A,B,b,i):
     setColor(makeColor(0.8, 0, 0.2+i*0.2))
     rectangle(A[0],A[1],B[0],B[1])
-    l = sp(B,richtung[i%4])-sp(A,richtung[i%4])
-    print l
 
 
 def euklid(a, b):
