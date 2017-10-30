@@ -2,7 +2,7 @@ import math
 import time
 from gpanel import *
 k_Max = 8950
-Start = 41
+Start = 1 #41
 
 def isprime(n):
     '''check if integer n is a prime'''
@@ -37,7 +37,7 @@ richtung = [[1,0],[0,1],[-1,0],[0,-1]]
 
 weg = []
 
-N = math.floor(math.sqrt(k_Max+1/4)+0.5)
+N = int(math.floor(math.sqrt(k_Max+1/4)+0.5))
 for i in range(1,N+1):
     for j in range(2):
         for k in range(i):
@@ -72,7 +72,7 @@ for k in range(1,k_Max):
     a = [0,0]
     for b in g:
         a = map(sum, zip(a,b))
-    time.sleep(0.25)
+    time.sleep(0.025)
     p = k+Start
     if isprime(p):
         setColor(col2)
