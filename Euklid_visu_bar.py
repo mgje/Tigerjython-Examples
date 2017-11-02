@@ -61,7 +61,10 @@ visuGgt(L)
 # Loop 
 for i in range(77):
     clear()
-    draw_Grid(a+2,a-8)
+    #draw_Grid(a+2,a-8)
+    s = "a = "+str(a)+"   b = "+str(b+i) 
+    font(Font("Arial",Font.BOLD,72)) 
+    text (8,30,s)
     ggt,L = euklid(a,b+i)
     visuGgt(L)
     delay(400)
