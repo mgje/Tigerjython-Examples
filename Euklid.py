@@ -6,5 +6,5 @@ def euklid(a, b):
         i += 1
     return a
 
-print euklid(5024553534,9578879697)
+print euklid(5*11*17,3*13*7)
 
