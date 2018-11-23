@@ -2,7 +2,6 @@
 from gturtle import *
 
 def zeichneKante(A,B):
-    #hideTurtle()
     penUp()
     moveTo(A[0],A[1])
     penDown()
@@ -12,8 +11,7 @@ def zeichneEcke(A):
     penUp()
     moveTo(A[0],A[1])
     dot(22)
-    
-    
+   
 makeTurtle()
 
 ecken = [[0,0],[120,90],[-145,155],[130,-203],[-123,-130]]
